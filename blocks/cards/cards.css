@@ -1,3 +1,7 @@
+:root {
+    --card-radius: 25px;
+}
+
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -10,6 +14,7 @@
 .cards > ul > li {
   border: 1px solid #dadada;
   background-color: var(--background-color);
+  border-radius: var(--card-radius);
 }
 
 .cards .cards-card-body {
@@ -24,4 +29,6 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
 }
