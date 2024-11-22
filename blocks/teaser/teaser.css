@@ -1,0 +1,9 @@
+.teaser {
+    a {
+        color: black;
+    }
+
+    .teaser-content {
+        background-size: cover;
+    }
+}
