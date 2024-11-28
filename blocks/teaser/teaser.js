@@ -10,7 +10,7 @@ export default function decorate(block) {
         link.href = button.href;
         buttonContainer.parentElement.removeChild(buttonContainer);
 
-        let image = col.querySelector('picture > img');
+        const image = col.querySelector('picture > img');
         if (image) {
           const teaserContent = document.createElement('div');
           teaserContent.style.backgroundImage = `url(${image.src})`;
