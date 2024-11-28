@@ -3,11 +3,12 @@ export default function decorate(block) {
 
   [...block.children].forEach((row) => {
     [...row.children].forEach((col) => {
-      let button = col.querySelector('.button-container a');
+      let buttonContainer = col.querySelector('.button-container');
+      let button = buttonContainer.querySelector('a');
       if (button) {
         let link = document.createElement('a');
         link.href = button.href;
-        button.parentElement.removeChild(button);
+        buttonContainer.parentElement.removeChild(buttonContainer);
 
         let image = col.querySelector('picture > img');
         if (image) {
