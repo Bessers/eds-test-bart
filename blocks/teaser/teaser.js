@@ -3,16 +3,16 @@ export default function decorate(block) {
 
   [...block.children].forEach((row) => {
     [...row.children].forEach((col) => {
-      let buttonContainer = col.querySelector('.button-container');
-      let button = buttonContainer.querySelector('a');
+      const buttonContainer = col.querySelector('.button-container');
+      const button = buttonContainer.querySelector('a');
       if (button) {
-        let link = document.createElement('a');
+        const link = document.createElement('a');
         link.href = button.href;
         buttonContainer.parentElement.removeChild(buttonContainer);
 
         let image = col.querySelector('picture > img');
         if (image) {
-          let teaserContent = document.createElement('div');
+          const teaserContent = document.createElement('div');
           teaserContent.style.backgroundImage = `url(${image.src})`;
           // teaserContent.textContent = 'hello world teaser'
           teaserContent.classList.add('teaser-content');
@@ -21,7 +21,8 @@ export default function decorate(block) {
           link.append(teaserContent);
         }
         block.append(link);
-    }});
+      }
+    });
     block.removeChild(row);
   });
 }
